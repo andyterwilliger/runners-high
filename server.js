@@ -26,7 +26,7 @@ db.on('disconnected', () => console.log('MongoDB disconnected...'))
 
 //Middlware
 
-
+app.use(express.urlencoded({extended: true}));
 
 //Routes/Controllers
 

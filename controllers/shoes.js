@@ -9,7 +9,7 @@ const app = express();
 //Create
 
 shoeRouter.post('/shoes', (req, res) =>{
-    res.send('received');
+    res.send(req.body);
 });
 
 
