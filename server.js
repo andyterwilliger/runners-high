@@ -24,6 +24,15 @@ db.on('error', (err) => console.log(err.message + "MongoDB is not connected"));
 db.on('connected', () => console.log('Mongo Connected!'));
 db.on('disconnected', () => console.log('MongoDB disconnected...'))
 
+//Middlware
+
+
+
+//Routes/Controllers
+
+shoesController = require('./controllers/shoes');
+
+app.use(shoesController);
 
 
 
