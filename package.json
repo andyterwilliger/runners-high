@@ -1,0 +1,29 @@
+{
+  "name": "runners-high",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andyterwilliger/runners-high.git"
+  },
+  "author": "Andy Terwilliger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andyterwilliger/runners-high/issues"
+  },
+  "homepage": "https://github.com/andyterwilliger/runners-high#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.1.5"
+  }
+}
