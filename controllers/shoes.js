@@ -27,8 +27,10 @@ shoeRouter.get('/new', (req, res) => {
 //Delete
 
 shoeRouter.delete('/:id', (req, res) => {
-    res.send('deleting...')
-})
+    Shoe.findByIdAndRemove(req.params.id, (err, data) =>{
+        res.redirect('/shoes')
+    });
+});
 
 //Create
 
