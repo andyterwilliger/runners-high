@@ -9,6 +9,10 @@ const Shoe = require('../models/shoe.js');
 
 //Index
 
+shoeRouter.get('/index', (req, res) =>{
+    res.render('index.ejs')
+})
+
 //New
 
 shoeRouter.get('/new', (req, res) => {
