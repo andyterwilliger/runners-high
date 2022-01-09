@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav>
-        <a href="/new">Add a Shoe</a>
+        <a href="/shoes/new">Add a Shoe</a>
     </nav>
     <h1>Runner's High</h1>
     <h2>My Shoes</h2>
@@ -17,6 +17,7 @@
         <%shoes.forEach(shoe => { %>
             <li>
                 <%=shoe.brand%> <%=shoe.model%>
+                <a href="/shoes/<%= shoe._id %>"> <img src="<%= shoe.img %>" alt=""></a>
 
 
             </li>

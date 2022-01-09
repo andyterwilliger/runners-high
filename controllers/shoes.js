@@ -30,10 +30,17 @@ shoeRouter.get('/new', (req, res) => {
 
 shoeRouter.post('/', (req, res) => {
     Shoe.create(req.body, (error, createdShoe) => {
-        res.send(createdShoe)
+        res.redirect('/shoes')
     });
 });
 
+//Edit
+
+//Show
+
+shoeRouter.get('/:id', (req, res) => {
+    res.send ('show')
+})
 
 
 

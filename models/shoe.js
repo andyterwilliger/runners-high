@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const shoeSchema = new mongoose.Schema({
     brand: String,
     model: String,
+    img: String,
     drop: Number,
     responsiveness: Number,
     price: Number,
