@@ -9,25 +9,30 @@ const Shoe = require('../models/shoe.js');
 
 //Index
 
-shoeRouter.get('/index', (req, res) =>{
-    res.render('index.ejs')
+shoeRouter.get('/', (req, res) => {
+    Shoe.find({}, (error, allShoes) => {
+        res.render('index.ejs', {
+            shoes: allShoes,
+        });
+    });
 })
+
 
 //New
 
 shoeRouter.get('/new', (req, res) => {
-        res.render('new.ejs')
-    });
+    res.render('new.ejs')
+});
 
 //Delete
 
 //Create
 
-shoeRouter.post('/', (req, res) =>{
+shoeRouter.post('/', (req, res) => {
     Shoe.create(req.body, (error, createdShoe) => {
         res.send(createdShoe)
     });
-})
+});
 
 
 

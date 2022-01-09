@@ -7,7 +7,23 @@
     <title>Index</title>
 </head>
 <body>
+    <nav>
+        <a href="/new">Add a Shoe</a>
+    </nav>
     <h1>Runner's High</h1>
     <h2>My Shoes</h2>
+
+    <ul>
+        <%shoes.forEach(shoe => { %>
+            <li>
+                <%=shoe.brand%> <%=shoe.model%>
+
+
+            </li>
+        
+        
+    <% }) %>
+    </ul>
+
 </body>
 </html>
