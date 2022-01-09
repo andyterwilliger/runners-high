@@ -11,8 +11,8 @@ const Shoe = require('../models/shoe.js');
 
 //New
 
-shoeRouter.get('/shoes/new', (req, res) => {
-        res.send('new')
+shoeRouter.get('/new', (req, res) => {
+        res.render('new.ejs')
     });
 
 //Delete
