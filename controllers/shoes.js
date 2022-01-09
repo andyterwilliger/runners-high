@@ -39,8 +39,12 @@ shoeRouter.post('/', (req, res) => {
 //Show
 
 shoeRouter.get('/:id', (req, res) => {
-    res.send ('show')
-})
+    Shoe.findById(req.params.id, (err, foundShoe) =>{
+        res.render('show.ejs', {
+            shoe: foundShoe,
+        });
+    });
+});
 
 
 
