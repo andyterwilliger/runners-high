@@ -8,6 +8,8 @@ const morgan = require('morgan');
 
 const methodOverride = require('method-override');
 
+const session = require('express-session');
+
 const app = express();
 
 require('dotenv').config();
@@ -30,6 +32,14 @@ db.on('disconnected', () => console.log('MongoDB disconnected...'))
 app.use(express.urlencoded({extended: true}));
 
 app.use(methodOverride('_method'));
+
+app.use(
+    session({
+        secret: process.env.SECRET,
+        resave: false,
+        saveUninitialized: false
+    })
+)
 
 //Routes/Controllers
 
