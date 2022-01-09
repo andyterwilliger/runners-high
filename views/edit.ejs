@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit <%=shoe.brand%> <%=shoe.model%></title>
+</head>
+<body>
+    <form action="/shoes/<%=shoe._id%>?_method=PUT" method = "POST">
+    Brand: <input type="text" name="brand" value="<%=shoe.brand%>" id="brand"> <br>
+    Model: <input type="text" name="model" id="model" value="<%=shoe.model%>"><br>
+    Image: <input type="text" name="img" id="img" value="<%=shoe.img%>"><br>
+    Drop: <input type="number" name="drop" id="drop" value="<%=shoe.drop%>"><br>
+    Responsiveness: <input type="number" name="responsiveness" id="responsiveness" value="<%=shoe.responsiveness%>"><br>
+    Price: <input type="number" name="price" id="price" value="<%=shoe.price%>"><br>
+    Summary: <input type="text" name="summary" id="summary" value="<%=shoe.summary%>"><br>
+    Overall: <input type="number" name="overall" id="overall" value="<%=shoe.overall%>"><br>
+    <input type="submit" value="Edit Shoe"><br>
+    </form>
+</body>
+</html>

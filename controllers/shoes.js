@@ -27,9 +27,23 @@ shoeRouter.get('/new', (req, res) => {
 //Delete
 
 shoeRouter.delete('/:id', (req, res) => {
-    Shoe.findByIdAndRemove(req.params.id, (err, data) =>{
+    Shoe.findByIdAndRemove(req.params.id, (err, data) => {
         res.redirect('/shoes')
     });
+});
+
+//Update
+
+shoeRouter.put('/:id', (req, res) => {
+    Shoe.findByIdAndUpdate(
+        req.params.id,
+        req.body, {
+            new: true,
+        },
+        (err, updatedShoe) => {
+            res.redirect(`/shoes/${req.params.id}`)
+        }
+    )
 });
 
 //Create
@@ -42,10 +56,18 @@ shoeRouter.post('/', (req, res) => {
 
 //Edit
 
+shoeRouter.get('/:id/edit', (req, res) => {
+    Shoe.findById(req.params.id, (err, foundShoe) => {
+        res.render('edit.ejs', {
+            shoe: foundShoe,
+        });
+    });
+});
+
 //Show
 
 shoeRouter.get('/:id', (req, res) => {
-    Shoe.findById(req.params.id, (err, foundShoe) =>{
+    Shoe.findById(req.params.id, (err, foundShoe) => {
         res.render('show.ejs', {
             shoe: foundShoe,
         });

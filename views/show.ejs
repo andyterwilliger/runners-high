@@ -9,6 +9,10 @@
 </head>
 
 <body>
+    <nav>
+        <a href="/shoes">Home</a>
+        <a href="/shoes/<%= shoe._id %>/edit">Edit Shoe</a>
+    </nav>
     <h1><%=shoe.brand%> <%=shoe.model%></h1>
     <p>
         <img src="<%=shoe.img%>" alt="">
