@@ -5,6 +5,7 @@ const shoeRouter = express.Router();
 const Shoe = require('../models/shoe.js');
 
 
+
 //Routes
 
 //Index
@@ -53,6 +54,7 @@ shoeRouter.post('/', (req, res) => {
         res.redirect('/shoes')
     });
 });
+
 
 //Edit
 

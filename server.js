@@ -29,6 +29,8 @@ db.on('disconnected', () => console.log('MongoDB disconnected...'))
 
 //Middlware
 
+app.use(morgan('dev'));
+
 app.use(express.urlencoded({extended: true}));
 
 app.use(methodOverride('_method'));
@@ -49,7 +51,11 @@ app.get('/', (req, res) =>{
 
 const shoesController = require('./controllers/shoes');
 
+const usersController = require('./controllers/users');
+
 app.use('/shoes', shoesController);
+
+app.use('/users', usersController);
 
 
 
