@@ -2,16 +2,28 @@ const express = require('express');
 
 const shoeRouter = express.Router();
 
-const app = express();
+const Shoe = require('../models/shoe.js');
+
 
 //Routes
 
+//Index
+
+//New
+
+shoeRouter.get('/shoes/new', (req, res) => {
+        res.send('new')
+    });
+
+//Delete
+
 //Create
 
-shoeRouter.post('/shoes', (req, res) =>{
-    res.send(req.body);
-});
-
+shoeRouter.post('/', (req, res) =>{
+    Shoe.create(req.body, (error, createdShoe) => {
+        res.send(createdShoe)
+    });
+})
 
 
 

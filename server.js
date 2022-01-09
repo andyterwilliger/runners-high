@@ -4,12 +4,13 @@ const express = require('express');
 
 const mongoose = require('mongoose');
 
-const methodOverride = require('method-override');
+const morgan = require('morgan');
 
-require('dotenv').config();
+const methodOverride = require('method-override');
 
 const app = express();
 
+require('dotenv').config();
 //Database Connection
 
 mongoose.connect(process.env.DATABASE_URL, {
@@ -28,16 +29,21 @@ db.on('disconnected', () => console.log('MongoDB disconnected...'))
 
 app.use(express.urlencoded({extended: true}));
 
+app.use(methodOverride('_method'));
+
 //Routes/Controllers
 
-shoesController = require('./controllers/shoes');
+app.get('/', (req, res) =>{
+    res.redirect('/shoes')
+});
 
-app.use(shoesController);
+const shoesController = require('./controllers/shoes');
 
+app.use('/shoes', shoesController);
 
 
 
 //Listener
 const PORT = process.env.PORT;
 
-app.listen(PORT, () => console.log('Server is listening!'));
+app.listen(PORT, () => console.log(`Server is listening at ${PORT}`));
