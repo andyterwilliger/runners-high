@@ -19,29 +19,31 @@
         
     </nav>
     <h1><%=shoe.brand%> <%=shoe.model%></h1>
-    <p>
+    <p id = "img-container">
         <img src="<%=shoe.img%>" alt="">
     </p>
+    <div id ="stats-container">
     <p>
-       Drop: <%=shoe.drop%>mm
-    </p>
-    <p>
-        Responsiveness: <%=shoe.responsiveness%>
-    </p>
-    <p>
-        Price: $<%=shoe.price%>
-    </p>
-    <p>
-        Summary: <%=shoe.summary%>
-    </p>
-    <p>
-       Overall Rating: <%=shoe.overall%>
-    </p>
+       Drop: <%=shoe.drop%>mm <br> <br>
+   
 
+        Responsiveness: <%=shoe.responsiveness%> <br><br>
+                                                
+
+        Price: $<%=shoe.price%> <br><br>
+                                
+
+        Summary: <%=shoe.summary%> <br><br>
+    
+
+       Overall Rating: <%=shoe.overall%> <br><br>
+    </p>
+</div>
+    <div id = "form-container">
     <form action="/shoes/<%= shoe.id %>?_method=DELETE" method="POST">
-        <input type="submit" value="Remove Shoe">
+        <input id ="delete-button" type="submit" value="Remove Shoe">
     </form>
-
+    </div>
 </body>
 
 </html>

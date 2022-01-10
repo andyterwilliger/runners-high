@@ -6,6 +6,11 @@ html {
     background-size: cover;
 }
 
+body{
+    font-family: 'Alien Encounters', sans-serif;
+         
+     color:white ;                                     
+}
 
 nav {
     background-color: #E500A4;
@@ -22,14 +27,41 @@ nav>a {
 
 }
 
-
-
 h1 {
     text-align: center;
 }
 
-body{
-    font-family: 'Alien Encounters', sans-serif;
-         
-     color:white ;                                     
+#img-container{
+    display: flex;
+    justify-content: center;
 }
+
+img{
+    width: 40%;
+    box-shadow: 10px 10px #E500A4;
+    
+}
+
+#stats-container{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 120%;
+   
+}
+
+#form-container{
+    display: flex;
+    justify-content: center;
+}
+
+#delete-button{
+    transform: translateX(-30%);
+    font-family: 'Alien Encounters', sans-serif;
+    padding: 20%;
+    font-size: 100%;
+    background-color: #4361EE;
+    box-shadow: 10px 10px   #E500A4;
+}
+
+

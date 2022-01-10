@@ -15,17 +15,20 @@
         <a href="/shoes">About</a>
     </nav>
     <h1>Add a Shoe</h1>
-    <form action="/shoes" method="POST">
-    Brand: <input type="text" name="brand" id="brand"> <br>
-    Model: <input type="text" name="model" id="model"><br>
-    Image: <input type="text" name="img" id="img"><br>
-    Drop: <input type="number" name="drop" id="drop"><br>
-    Responsiveness: <input type="number" name="responsiveness" id="responsiveness"><br>
-    Price: <input type="number" name="price" id="price"><br>
-    Summary: <input type="text" name="summary" id="summary"><br>
-    Overall: <input type="number" name="overall" id="overall"><br>
-    <input type="submit" value="Add Shoe"><br>
-
+    <div id = "form-container">
+    <form action="/shoes" method="POST"> 
+    Brand: <input type="text" name="brand" id="brand"> <br> <br>
+    Model: <input type="text" name="model" id="model"><br> <br>
+    Image: <input type="text" name="img" id="img"><br> <br>
+    Drop: <input type="number" name="drop" id="drop"><br> <br>
+    Responsiveness: <input type="number" name="responsiveness" id="responsiveness"><br> <br>
+    Price: <input type="number" name="price" id="price"><br> <br>
+    Summary: <input type="text" name="summary" id="summary"><br> <br>
+    Overall: <input type="number" name="overall" id="overall"><br> <br>
+    </div>
+    <div id = "submit-container">
+    <input id ="add-button" type="submit" value="Add Shoe"><br> <br>
+    </div>
 
     
     </form>

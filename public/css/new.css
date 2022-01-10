@@ -32,3 +32,19 @@ body{
 h1 {
     text-align: center;
 }
+
+#form-container{
+   text-align: center;
+}
+
+#submit-container{
+    text-align: center;
+}
+
+#add-button{
+    background-color: #4361EE;
+    font-family: 'Alien Encounters', sans-serif;
+    font-size: 100%;
+    box-shadow: #E500A4 10px 10px;
+    padding: 2%;
+}
