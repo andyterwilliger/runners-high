@@ -4,9 +4,21 @@ const shoeRouter = express.Router();
 
 const Shoe = require('../models/shoe.js');
 
+const shoeSeed = require('../models/shoeSeed.js');
+
 
 
 //Routes
+
+//Seed
+
+shoeRouter.get('/seed', (req, res) => {
+    Shoe.deleteMany({}, (error, allShoes) => {})
+
+    Shoe.create(shoeSeed, (error, data) => {
+        res.redirect('/')
+    })
+})
 
 //Index
 
@@ -16,7 +28,7 @@ shoeRouter.get('/', (req, res) => {
             shoes: allShoes,
         });
     });
-})
+});
 
 
 //New
