@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <link href="http://fonts.cdnfonts.com/css/alien-encounters" rel="stylesheet">
     <title>Index</title>
 </head>
+
 <body>
-    <nav>
-        <a href="/shoes/new">Add a Shoe</a>
-    </nav>
+    <div id ="nav-container">
+        <nav id ="nav-bar">
+            <a id = "home-nav" class = "nav-bar-items" href="/shoes/home">Home</a>
+            <a id = "new-nav" class = "nav-bar-items" href="/shoes/new">Add a Shoe</a>
+            <a id = "about-nav" class = "nav-bar-items" href="/shoes">About</a>
+        </nav>
+    </div>
     <h1>Runner's High</h1>
     <h2>My Shoes</h2>
 
     <ul>
         <%shoes.forEach(shoe => { %>
-            <li>
-                <%=shoe.brand%> <%=shoe.model%>
-                <a href="/shoes/<%= shoe._id %>"> <img src="<%= shoe.img %>" alt=""></a>
+        <li>
+            <p id ="shoe-name"><%=shoe.brand%> <%=shoe.model%></p> <br>
+            <a href="/shoes/<%= shoe._id %>"> <img src="<%= shoe.img %>" alt=""></a>
 
 
-            </li>
-        
-        
-    <% }) %>
+        </li>
+
+
+        <% }) %>
     </ul>
 
 </body>
+
 </html>

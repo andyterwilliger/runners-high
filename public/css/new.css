@@ -1,0 +1,34 @@
+html {
+    background: url('https://images.unsplash.com/photo-1563089145-599997674d42?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+nav {
+    background-color: #E500A4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+
+}
+
+nav>a {
+    text-decoration: none;
+    color: white;
+
+}
+
+body{
+    font-family: 'Alien Encounters', sans-serif;
+         
+     color:white ;                                     
+}
+
+
+h1 {
+    text-align: center;
+}

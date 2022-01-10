@@ -5,32 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%=shoe.brand%> <%=shoe.name%></title>
+    <link rel="stylesheet" href="/css/show.css">
+    <link href="http://fonts.cdnfonts.com/css/alien-encounters" rel="stylesheet">
+    <title><%=shoe.brand%> <%=shoe.model%></title>
 </head>
 
 <body>
     <nav>
         <a href="/shoes">Home</a>
         <a href="/shoes/<%= shoe._id %>/edit">Edit Shoe</a>
+        <a href="/shoes/new">Add a Shoe</a>
+        <a href="/shoes">About</a>
+        
     </nav>
     <h1><%=shoe.brand%> <%=shoe.model%></h1>
     <p>
         <img src="<%=shoe.img%>" alt="">
     </p>
     <p>
-        <%=shoe.drop%>
+       Drop: <%=shoe.drop%>mm
     </p>
     <p>
-        <%=shoe.responsiveness%>
+        Responsiveness: <%=shoe.responsiveness%>
     </p>
     <p>
-        <%=shoe.price%>
+        Price: $<%=shoe.price%>
     </p>
     <p>
-        <%=shoe.summary%>
+        Summary: <%=shoe.summary%>
     </p>
     <p>
-        <%=shoe.overall%>
+       Overall Rating: <%=shoe.overall%>
     </p>
 
     <form action="/shoes/<%= shoe.id %>?_method=DELETE" method="POST">
