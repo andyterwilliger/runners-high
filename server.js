@@ -55,6 +55,10 @@ const shoesController = require('./controllers/shoes');
 
 const usersController = require('./controllers/users');
 
+const sessionsController = require('./controllers/sessions');
+
+app.use('/sessions', sessionsController);
+
 app.use('/shoes', shoesController);
 
 app.use('/users', usersController);
