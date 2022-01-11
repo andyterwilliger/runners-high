@@ -7,9 +7,14 @@ const sessionsRouter = express.Router();
 const User = require('../models/user.js');
 const session = require('express-session');
 
+//Home
+
+sessionsRouter.get('/', (req, res) =>{
+    res.render('home.ejs')
+})
 
 sessionsRouter.get('/login', (req, res) => {
-    res.render('login')
+    res.render('login.ejs')
 })
 
 //Create: Login route
