@@ -27,7 +27,7 @@ db.on('error', (err) => console.log(err.message + "MongoDB is not connected"));
 db.on('connected', () => console.log('Mongo Connected!'));
 db.on('disconnected', () => console.log('MongoDB disconnected...'))
 
-//Middlware
+//Middleware
 
 app.use(morgan('dev'));
 

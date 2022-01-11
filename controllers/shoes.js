@@ -20,11 +20,6 @@ shoeRouter.get('/seed', (req, res) => {
     })
 })
 
-//Home
-
-shoeRouter.get('/home', (req, res) => {
-    res.render('home.ejs')
-})
 
 
 //Index

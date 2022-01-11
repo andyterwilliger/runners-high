@@ -8,6 +8,10 @@ const User = require('../models/user.js');
 const session = require('express-session');
 
 
+sessionsRouter.get('/login', (req, res) => {
+    res.render('login')
+})
+
 //Create: Login route
 
 sessionsRouter.post('/', (req, res) => {
