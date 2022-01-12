@@ -5,21 +5,25 @@ const bcrypt = require('bcrypt');
 const sessionsRouter = express.Router();
 
 const User = require('../models/user.js');
+
 const session = require('express-session');
+
+const userRouter = require('./users.js');
 
 //Home
 
 sessionsRouter.get('/', (req, res) =>{
     res.render('home.ejs')
 })
-
+//new login page
 sessionsRouter.get('/login', (req, res) => {
-    res.render('login.ejs')
-})
-
+    res.render('login.ejs', {
+    //currentUser : req.session.currentUser
+});
+});
 //Create: Login route
 
-sessionsRouter.post('/', (req, res) => {
+sessionsRouter.post('/login', (req, res) => {
     User.findOne({
         email: req.body.email
     }, (error, foundUser) => {
@@ -31,7 +35,7 @@ sessionsRouter.post('/', (req, res) => {
             //if passwords match
             if (passwordMatches) {
                 req.session.currentUser = foundUser;
-                res.redirect('/')
+                res.redirect('/shoes')
             } else {
                 res.send(`We've "run" into an issue... That's not a recognized password! Try again.`);
             }
@@ -43,7 +47,7 @@ sessionsRouter.post('/', (req, res) => {
 
 sessionsRouter.delete('/', (req, res) => {
     req.session.destroy((err) => {
-        res.redirect('shoes/home')
+        res.redirect('/')
     });
 });
 

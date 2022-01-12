@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <link href="http://fonts.cdnfonts.com/css/alien-encounters" rel="stylesheet">
     <title>Login to Runner's High</title>
 </head>
 <body>
-    <h1>Enter your Login Information</h1>
+    <h1>Enter your Login Information:</h1>
+   
+    
+    <form action="/sessions/login" method= "POST">
+    Email: <input type="email" name="email" id="email"> <br> <br>
+    Password: <input type="password" name="password" id="password"><br><br>
+    <input id= "login-button" type="submit" value="Login"><br>
+    
+    
+    </form>
 </body>
 </html>

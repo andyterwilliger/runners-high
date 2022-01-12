@@ -27,7 +27,9 @@ shoeRouter.get('/seed', (req, res) => {
 shoeRouter.get('/', (req, res) => {
     Shoe.find({}, (error, allShoes) => {
         res.render('index.ejs', {
+            currentUser: req.session.currentUser,
             shoes: allShoes,
+
         });
     });
 });

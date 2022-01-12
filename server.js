@@ -10,6 +10,8 @@ const methodOverride = require('method-override');
 
 const session = require('express-session');
 
+const User = require('./models/user');
+
 const app = express();
 
 require('dotenv').config();
@@ -45,10 +47,27 @@ app.use(
     })
 )
 
+app.use(function(req, res, next){
+    if(!req.session.user) {
+        res.locals.user = null;
+        return next();
+}
+    
+        User.findById(req.session.user, (err, user) =>{
+        req.user = user;
+        delete req.user.password;
+        res.locals.user = req.user;
+        next();
+    })
+})
+
+
+
+
 //Routes/Controllers
 
 app.get('/', (req, res) =>{
-    res.redirect('/shoes')
+    res.redirect('/users')
 });
 
 const shoesController = require('./controllers/shoes');

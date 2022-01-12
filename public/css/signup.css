@@ -5,32 +5,26 @@ html {
     -o-background-size: cover;
     background-size: cover;
   }
-body{
+  body{
     font-family: 'Alien Encounters', sans-serif;
-    color: white;
+    color:white;
+  }
+
+  h1{
+      text-align: center;
+      font-size: 400%;
+  }
+
+  form{
+      text-align: center;
+      font-size: 300%;
+      
+  }
+
+  #signup-button{
+    font-family: 'Alien Encounters', sans-serif;
+    font-size: 120%;
+    padding: 1%;
+    background-color: #4361EE;
+    box-shadow: 10px 10px   #E500A4;
 }
-
-a{
-  color: white;
-  text-decoration: none;
-}
-  #h1-div{
-    height: 100%;
-    width: 100%;  
-    font-size: 400%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-  }
-
-  a{
-    color: white;
-    text-decoration: none;
-    font-size: 300%;
-  }
-
-  nav{
-    text-align: center;
-  }
