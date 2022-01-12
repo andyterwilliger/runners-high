@@ -25,7 +25,7 @@ shoeRouter.get('/seed', (req, res) => {
 //Index
 
 shoeRouter.get('/', (req, res) => {
-   /* if (req.session.currentUser) {
+    /*if (req.session.currentUser) {
         res.render('/users', {
             currentUser: req.session.currentUser
         })

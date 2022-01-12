@@ -18,7 +18,7 @@ sessionsRouter.get('/', (req, res) =>{
 //new login page
 sessionsRouter.get('/login', (req, res) => {
     res.render('login.ejs', {
-    //currentUser : req.session.currentUser
+    currentUser : req.session.currentUser
 });
 });
 //Create: Login route
@@ -45,7 +45,7 @@ sessionsRouter.post('/login', (req, res) => {
 
 //Delete: logout
 
-sessionsRouter.delete('/', (req, res) => {
+sessionsRouter.delete('/shoes', (req, res) => {
     req.session.destroy((err) => {
         res.redirect('/')
     });

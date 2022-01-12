@@ -6,8 +6,9 @@ const shoeSchema = new mongoose.Schema({
     img: String,
     drop: Number,
     responsiveness: Number,
+    cushion: Number,
+    mileage: Number,
     price: Number,
-    summary: String,
     overall: Number
 });
 
