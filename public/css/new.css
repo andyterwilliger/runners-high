@@ -64,3 +64,12 @@ h1 {
     box-shadow: 10px 10px   #E500A4;
     transition: .5s;
 }
+
+@media screen and (max-width: 480px){
+    h1{
+        font-size: 200%;
+    }
+    #form-container{
+        font-size: 100%;
+    }
+}
