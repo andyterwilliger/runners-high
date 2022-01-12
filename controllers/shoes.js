@@ -43,6 +43,12 @@ shoeRouter.get('/', (req, res) => {
     })
 })
 
+shoeRouter.get('/about', (req, res) => {
+    res.render('about.ejs')
+});
+
+
+
 //New
 
 shoeRouter.get('/new', (req, res) => {
