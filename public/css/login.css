@@ -25,5 +25,9 @@ html {
     font-size: 120%;
     padding: 1%;
     background-color: #4361EE;
+}
+
+#login-button:hover{
     box-shadow: 10px 10px   #E500A4;
+    transition: .5s;
 }

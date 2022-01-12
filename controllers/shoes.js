@@ -25,15 +25,23 @@ shoeRouter.get('/seed', (req, res) => {
 //Index
 
 shoeRouter.get('/', (req, res) => {
+   /* if (req.session.currentUser) {
+        res.render('/users', {
+            currentUser: req.session.currentUser
+        })
+    } else {
+        res.render('/shoes', {
+            currentUser: req.session.currentUser
+        })
+    }
+*/
     Shoe.find({}, (error, allShoes) => {
         res.render('index.ejs', {
             currentUser: req.session.currentUser,
             shoes: allShoes,
-
-        });
-    });
-});
-
+        })
+    })
+})
 
 //New
 

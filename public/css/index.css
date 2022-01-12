@@ -35,6 +35,11 @@ nav > a{
 
 }
 
+nav > a:hover{
+    transition-duration: 1s;
+    transform: scale(2.0);
+}
+
 
 h1{
     text-align: center;
@@ -62,4 +67,10 @@ li{
 img{
     width: 75%;
     box-shadow: 10px 10px #E500A4;
+}
+
+img:hover{
+    transform: scale(1.3);
+    transition-duration: 1s;
+
 }
