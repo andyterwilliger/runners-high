@@ -27,6 +27,11 @@ nav>a {
 
 }
 
+nav > a:hover{
+    transition-duration: 1s;
+    transform: scale(2.0);
+}
+
 body{
     font-family: 'Alien Encounters', sans-serif;
          
@@ -52,6 +57,10 @@ h1 {
     background-color: #4361EE;
     font-family: 'Alien Encounters', sans-serif;
     font-size: 100%;
-    box-shadow: #E500A4 10px 10px;
     padding: 2%;
+}
+
+#add-button:hover{
+    box-shadow: 10px 10px   #E500A4;
+    transition: .5s;
 }

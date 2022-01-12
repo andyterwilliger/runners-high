@@ -32,6 +32,11 @@ nav>a {
 
 }
 
+nav > a:hover{
+    transition-duration: 1s;
+    transform: scale(2.0);
+}
+
 h1 {
     text-align: center;
 }
@@ -66,7 +71,10 @@ img{
     padding: 20%;
     font-size: 100%;
     background-color: #4361EE;
-    box-shadow: 10px 10px   #E500A4;
 }
 
 
+#delete-button:hover{
+    box-shadow: 10px 10px   #E500A4;
+    transition: .5s;
+}
