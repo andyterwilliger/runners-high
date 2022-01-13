@@ -49,6 +49,11 @@ h1 {
    font-size: 200%;
 }
 
+input{
+    padding: .7%;
+    font-family: 'Alien Encounters', sans-serif;
+}
+
 #submit-container{
     text-align: center;
 }

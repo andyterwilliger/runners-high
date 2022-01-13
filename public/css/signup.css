@@ -27,6 +27,11 @@ html {
       
   }
 
+  input{
+    padding: .7%;
+    font-family: 'Alien Encounters', sans-serif;
+}
+
   #signup-button{
     font-family: 'Alien Encounters', sans-serif;
     font-size: 120%;

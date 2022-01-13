@@ -24,6 +24,11 @@ html {
       font-size: 300%;
   }
 
+  input{
+    padding: .7%;
+    font-family: 'Alien Encounters', sans-serif;
+}
+
   #login-button{
     font-family: 'Alien Encounters', sans-serif;
     font-size: 120%;
