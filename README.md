@@ -15,9 +15,10 @@ Runner's high is a full stack CRUD application in which users can sign up, log i
 
 ## Screenshots
 
-https://imgur.com/011JjhV
+![image](https://user-images.githubusercontent.com/76022623/149526441-8fd55c8f-5a2c-4d4a-a5f0-b0d5a672ebc2.png)
 
-https://imgur.com/2akpdSu
+![image](https://user-images.githubusercontent.com/76022623/149526487-bfe584df-1cc5-4e74-a491-42bc29a5258e.png)
+
 
 ## Getting started
 
