@@ -2,6 +2,14 @@
     font-family: 'Alien Encounters, sans-serif';
     src: url('https://fonts.cdnfonts.com/css/alien-encounters');
 }
+@font-face {
+    font-family: 'alien_encounters_soliditalic';
+    src: url('alien-encounters-solid-italic.woff2') format('woff2'),
+         url('alien-encounters-solid-italic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 html { 
     background: url('https://images.unsplash.com/photo-1563089145-599997674d42?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed; 
